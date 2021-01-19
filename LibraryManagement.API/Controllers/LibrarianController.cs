@@ -12,8 +12,8 @@ namespace LibraryManagement.API.Controllers
             return true;
         }
 
-        [HttpPut("book/{bookId}/withdraw/visitor/{visitorId}")]
-        public bool WithdrawBook(int bookId, int visitorId)
+        [HttpPut("book/{bookId}/withdraw")]
+        public bool WithdrawBook(int bookId)
         {
             return true;
         }
