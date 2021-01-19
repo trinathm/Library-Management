@@ -32,7 +32,7 @@ namespace LibraryManagement.API.Controllers
         }
 
         [HttpPut("{visitorCode}/clockout")]
-        public bool LibraryClockOut(int visitorCode)
+        public bool LibraryClockOut(string visitorCode)
         {
             return true;
         }
