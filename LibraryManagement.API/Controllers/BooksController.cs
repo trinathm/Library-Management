@@ -18,42 +18,43 @@ namespace LibraryManagement.API.Controllers
             };
         }
 
-        [HttpGet("{bookId:int}/details")]
-        public Book GetBookDetails(int bookId)
+        [HttpGet("{bookId:int}")]
+        public Book GetBook(int bookId)
         {
             return new Book();
         }
 
-        [HttpPost("addcategory")]
-        public int AddBookCategory(BookCategory bookCategory)
+        [HttpPost("category")]
+        public int PostBookCategory(BookCategory bookCategory)
         {
             return 0; //// id of newly added category
         }
 
-        [HttpPost("category/{categoryId}/update")]
-        public int AddBookCategory(int categoryId, BookCategory bookCategory)
+        [HttpPut("category/{categoryId}")]
+        public int PutBookCategory(int categoryId, BookCategory bookCategory)
         {
             return 0; //// id of newly added category
         }
 
-        [HttpPost("add")]
-        public int AddBook(Book book)
+        [HttpPost]
+        public int PostBook(Book book)
         {
             return 0; //// id of newly added book
         }
 
-        [HttpPost("bulkadd")]
-        public void BulkAddBooks(List<Book> books)
+        [HttpPost("bulk")]
+        public void PostBulkBooks(List<Book> books)
         {
+            /// Need to find some better name or move this import to another controller
         }
 
-        [HttpPut("{bookId}/update")]
-        public bool UpdateBook(int bookId, Book book)
+        [HttpPut("{bookId}")]
+        public bool PutBook(int bookId, Book book)
         {
             return true; //// status whether updated or not, only if necessary
         }
 
-        [HttpDelete("{bookId}/delete")]
+        [HttpDelete("{bookId}")]
         public bool DeleteBook(int bookId)
         {
             return true;
